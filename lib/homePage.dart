@@ -39,10 +39,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  int result;
-  int cleck = 0;
-
-  ontap(int i) {
+  onTaap(int i) {
     // anbatyList[0]["anbaty"];
     setState(() {
       listImageResult.add(anbatyList[i]);
@@ -60,15 +57,38 @@ class _HomePageState extends State<HomePage> {
             Container()
           else
             Container(
-              height: 40,
+              color: Colors.orangeAccent,
+              height: 200,
               width: double.infinity,
-              child: ListView.separated(
-                scrollDirection: Axis.horizontal,
-                itemBuilder: (context, index) => buldCard1(index),
-                separatorBuilder: (context, index) => SizedBox(width: 5),
-                itemCount: listImageResult.length,
+              child: GridView.extent(
+                physics: PageScrollPhysics(),
+                // physics: NeverScrollableScrollPhysics(),
+                maxCrossAxisExtent: 60,
+                children:
+                    new List<Widget>.generate(listImageResult.length, (index) {
+                  return new GridTile(
+                    child: Container(
+                        width: 20,
+                        height: 20,
+                        child: Card(
+                          child: Center(
+                            child: Image.asset(
+                              listImageResult[index]["anbaty"],
+                            ),
+                            // new Text(anbatChak[index]),
+                          ),
+                        )),
+                  );
+                }),
               ),
             ),
+          SizedBox(height: 10),
+          Container(
+            color: Colors.grey,
+            height: 200,
+            width: double.infinity,
+            child: ListView(),
+          ),
           Spacer(),
           Container(
             height: 240,
@@ -80,7 +100,7 @@ class _HomePageState extends State<HomePage> {
               children: new List<Widget>.generate(anbatyList.length, (index) {
                 return new GridTile(
                   child: InkWell(
-                    onTap: () => ontap(index),
+                    onTap: () => onTaap(index),
                     child: new Container(
                         width: 20,
                         height: 20,
@@ -112,6 +132,19 @@ class _HomePageState extends State<HomePage> {
           listImageResult[i]["anbaty"],
         ),
       ),
+    );
+  }
+
+  Widget buldCard2(int i) {
+    return GridView.builder(
+      gridDelegate:
+          SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
+      itemBuilder: (_, index) => Card(
+        child: Image.asset(
+          listImageResult[index]["anbaty"],
+        ),
+      ),
+      itemCount: listImageResult.length,
     );
   }
 }
