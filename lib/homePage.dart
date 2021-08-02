@@ -1,35 +1,36 @@
 import 'package:flutter/material.dart';
 
 List listImageResult = [];
-const List anbatChak = [
-  "assets/images/حرف (أ).png",
-  "assets/images/حرف (ب).png",
-  "assets/images/حرف (ت).png",
-  "assets/images/حرف (ث).png",
-  "assets/images/حرف (ج).png",
-  "assets/images/حرف (ح).png",
-  "assets/images/حرف (خ).png",
-  "assets/images/حرف (د).png",
-  "assets/images/حرف (ذ).png",
-  "assets/images/حرف (ر).png",
-  "assets/images/حرف (ز).png",
-  "assets/images/حرف (س).png",
-  "assets/images/حرف (ش).png",
-  "assets/images/حرف (ص).png",
-  "assets/images/حرف (ض).png",
-  "assets/images/حرف (ط).png",
-  "assets/images/حرف (ظ).png",
-  "assets/images/حرف (ع).png",
-  "assets/images/حرف (غ).png",
-  "assets/images/حرف (ف).png",
-  "assets/images/حرف (ق).png",
-  "assets/images/حرف (ك).png",
-  "assets/images/حرف (ل).png",
-  "assets/images/حرف (م).png",
-  "assets/images/حرف (ن).png",
-  "assets/images/حرف (هـ).png",
-  "assets/images/حرف (و).png",
-  "assets/images/حرف (ي).png",
+
+List<Map> anbatyList = [
+  {"anbaty": "assets/images/حرف (أ).png", "arabic": "أ"},
+  {"anbaty": "assets/images/حرف (ب).png", "arabic": "ب"},
+  {"anbaty": "assets/images/حرف (ت).png", "arabic": "ت"},
+  {"anbaty": "assets/images/حرف (ث).png", "arabic": "ث"},
+  {"anbaty": "assets/images/حرف (ج).png", "arabic": "ج"},
+  {"anbaty": "assets/images/حرف (ح).png", "arabic": "ح"},
+  {"anbaty": "assets/images/حرف (خ).png", "arabic": "خ"},
+  {"anbaty": "assets/images/حرف (د).png", "arabic": "د"},
+  {"anbaty": "assets/images/حرف (ذ).png", "arabic": "ذ"},
+  {"anbaty": "assets/images/حرف (ر).png", "arabic": "ر"},
+  {"anbaty": "assets/images/حرف (ز).png", "arabic": "ز"},
+  {"anbaty": "assets/images/حرف (س).png", "arabic": "س"},
+  {"anbaty": "assets/images/حرف (ش).png", "arabic": "ش"},
+  {"anbaty": "assets/images/حرف (ص).png", "arabic": "ص"},
+  {"anbaty": "assets/images/حرف (ض).png", "arabic": "ض"},
+  {"anbaty": "assets/images/حرف (ط).png", "arabic": "ط"},
+  {"anbaty": "assets/images/حرف (ظ).png", "arabic": "ظ"},
+  {"anbaty": "assets/images/حرف (ع).png", "arabic": "ع"},
+  {"anbaty": "assets/images/حرف (غ).png", "arabic": "غ"},
+  {"anbaty": "assets/images/حرف (ف).png", "arabic": "ف"},
+  {"anbaty": "assets/images/حرف (ق).png", "arabic": "ق"},
+  {"anbaty": "assets/images/حرف (ك).png", "arabic": "ك"},
+  {"anbaty": "assets/images/حرف (ل).png", "arabic": "ل"},
+  {"anbaty": "assets/images/حرف (م).png", "arabic": "م"},
+  {"anbaty": "assets/images/حرف (ن).png", "arabic": "ن"},
+  {"anbaty": "assets/images/حرف (هـ).png", "arabic": "هـ"},
+  {"anbaty": "assets/images/حرف (و).png", "arabic": "و"},
+  {"anbaty": "assets/images/حرف (ي).png", "arabic": "ي"},
 ];
 
 class HomePage extends StatefulWidget {
@@ -42,11 +43,9 @@ class _HomePageState extends State<HomePage> {
   int cleck = 0;
 
   ontap(int i) {
+    // anbatyList[0]["anbaty"];
     setState(() {
-      // cleck++;
-      // result = i;
-      // print(i);
-      listImageResult.add(anbatChak[i]);
+      listImageResult.add(anbatyList[i]);
       print(listImageResult.toString());
     });
   }
@@ -78,7 +77,7 @@ class _HomePageState extends State<HomePage> {
               physics: PageScrollPhysics(),
               // physics: NeverScrollableScrollPhysics(),
               maxCrossAxisExtent: 60,
-              children: new List<Widget>.generate(anbatChak.length, (index) {
+              children: new List<Widget>.generate(anbatyList.length, (index) {
                 return new GridTile(
                   child: InkWell(
                     onTap: () => ontap(index),
@@ -89,7 +88,7 @@ class _HomePageState extends State<HomePage> {
                         child: Card(
                           child: Center(
                             child: Image.asset(
-                              anbatChak[index],
+                              anbatyList[index]["anbaty"],
                             ),
                             // new Text(anbatChak[index]),
                           ),
@@ -110,7 +109,7 @@ class _HomePageState extends State<HomePage> {
       height: 20,
       child: Card(
         child: Image.asset(
-          listImageResult[i],
+          listImageResult[i]["anbaty"],
         ),
       ),
     );
