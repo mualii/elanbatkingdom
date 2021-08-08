@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 List listImageResult = [];
 
 List<Map> anbatyList = [
-  {"anbaty": "assets/images/حرف أ.png", "arabic": "أ"},
+  {"anbaty": "assets/images/حرف ا.png", "arabic": "أ"},
   {"anbaty": "assets/images/حرف ال.png", "arabic": "ال"},
   {"anbaty": "assets/images/حرف لا.png", "arabic": "لا"},
   {"anbaty": "assets/images/حرف ب.png", "arabic": "ب"},
@@ -122,6 +122,7 @@ class _HomePageState extends State<HomePage> {
                         height: 20,
                         color: Colors.blue.shade200,
                         child: Card(
+                          color: Colors.black12,
                           child: Center(
                             child: Image.asset(
                               anbatyList[index]["anbaty"],
