@@ -45,6 +45,8 @@ flutter:
   # the material Icons class.
   uses-material-design: true
   assets:
+    - assets/images/anbaty_Simples/
+    - assets/images/keyboard/
     - assets/images/
   # To add assets to your application, add an assets section, like this:
   # assets:
