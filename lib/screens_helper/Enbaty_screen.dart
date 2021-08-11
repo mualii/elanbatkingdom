@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class EnbatyScreen extends StatelessWidget {
   List model;
@@ -8,17 +9,18 @@ class EnbatyScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(20),
+        borderRadius: BorderRadius.only(
+            topLeft: Radius.circular(20), topRight: Radius.circular(20)),
         color: Color(0xffE1D9D0),
       ),
-      height: 170,
+      height: 380.h,
       width: double.infinity,
       child: Directionality(
         textDirection: TextDirection.rtl,
         child: GridView.extent(
           physics: PageScrollPhysics(),
           // physics: NeverScrollableScrollPhysics(),
-          maxCrossAxisExtent: 60,
+          maxCrossAxisExtent: 130.h,
           children: new List<Widget>.generate(model.length, (index) {
             return new GridTile(
               child: Container(
@@ -44,3 +46,11 @@ class EnbatyScreen extends StatelessWidget {
     );
   }
 }
+// Container(
+//   height: 30,
+//   child: Row(
+//     children: [
+//       IconButton(onPressed: () {}, icon: FaIcon(Icons.copy))
+//     ],
+//   ),
+// )
