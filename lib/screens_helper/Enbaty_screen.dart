@@ -4,7 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 class EnbatyScreen extends StatelessWidget {
   List model;
   EnbatyScreen({this.model});
-
+  // final controller = ScreenshotController();
   @override
   Widget build(BuildContext context) {
     return Container(

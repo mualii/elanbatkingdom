@@ -20,10 +20,12 @@ class ArabicScreen extends StatelessWidget {
           physics: PageScrollPhysics(),
           maxCrossAxisExtent: 130.h,
           children: new List<Widget>.generate(model.length, (index) {
-            return new GridTile(
-                child: Center(child: Text(model[index]["arabic"]))
-                // new Text(anbatChak[index]),
-                );
+            return Center(
+              child: Text(
+                model[index]["arabic"],
+                style: TextStyle(fontSize: 30),
+              ),
+            );
           }),
         ),
       ),
