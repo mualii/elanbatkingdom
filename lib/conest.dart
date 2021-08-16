@@ -15,34 +15,34 @@ const List<Map> anbatyList = [
     "anbatySimple": "assets/images/anbaty_Simples/حرف (لا).png"
   },
   {
-    "anbaty": "assets/images/keyboard/حرف ب.png",
-    "arabic": "ب",
-    "anbatySimple": "assets/images/anbaty_Simples/حرف(ب).png"
-  },
-  {
-    "anbaty": "assets/images/keyboard/حرف ب2.png",
-    "arabic": "ب",
+    "anbaty": "assets/images/keyboard/حرف ب 1.png",
+    "arabic": "بــ",
     "anbatySimple": "assets/images/anbaty_Simples/حرف(ب)2.png"
   },
   {
-    "anbaty": "assets/images/keyboard/حرف ت.png",
-    "arabic": "ت",
-    "anbatySimple": "assets/images/anbaty_Simples/حرف (ت).png"
+    "anbaty": "assets/images/keyboard/حرف ب 2.png",
+    "arabic": "ـب",
+    "anbatySimple": "assets/images/anbaty_Simples/حرف(ب).png"
   },
   {
-    "anbaty": "assets/images/keyboard/حرف ت2.png",
-    "arabic": "ت",
+    "anbaty": "assets/images/keyboard/حرف ت 1.png",
+    "arabic": "تــ",
     "anbatySimple": "assets/images/anbaty_Simples/حرف (ت)2.png"
   },
   {
-    "anbaty": "assets/images/keyboard/حرف ث.png",
-    "arabic": "ث",
-    "anbatySimple": "assets/images/anbaty_Simples/حرف(ث).png"
+    "anbaty": "assets/images/keyboard/حرف ت 2.png",
+    "arabic": "ـت",
+    "anbatySimple": "assets/images/anbaty_Simples/حرف (ت).png"
   },
   {
-    "anbaty": "assets/images/keyboard/حرف ث2.png",
-    "arabic": "ث",
+    "anbaty": "assets/images/keyboard/حرف ث 1.png",
+    "arabic": "ثـ",
     "anbatySimple": "assets/images/anbaty_Simples/حرف(ث)2.png"
+  },
+  {
+    "anbaty": "assets/images/keyboard/حرف ث 2.png",
+    "arabic": "ـث",
+    "anbatySimple": "assets/images/anbaty_Simples/حرف(ث).png"
   },
   {
     "anbaty": "assets/images/keyboard/حرف ج.png",
@@ -50,24 +50,24 @@ const List<Map> anbatyList = [
     "anbatySimple": "assets/images/anbaty_Simples/حرف (ج).png"
   },
   {
-    "anbaty": "assets/images/keyboard/حرف ح2.png",
-    "arabic": "ح",
-    "anbatySimple": "assets/images/anbaty_Simples/حرف (ح).png"
+    "anbaty": "assets/images/keyboard/حرف ح 1.png",
+    "arabic": "حـ",
+    "anbatySimple": "assets/images/anbaty_Simples/حرف (ح)2.png"
   },
   {
     "anbaty": "assets/images/keyboard/حرف ح.png",
     "arabic": "ح",
-    "anbatySimple": "assets/images/anbaty_Simples/حرف (ح)2.png"
+    "anbatySimple": "assets/images/anbaty_Simples/حرف (ح).png"
   },
   {
-    "anbaty": "assets/images/keyboard/حرف خ2.png",
-    "arabic": "خ",
-    "anbatySimple": "assets/images/anbaty_Simples/حرف (خ).png"
+    "anbaty": "assets/images/keyboard/حرف خ 1.png",
+    "arabic": "خـ",
+    "anbatySimple": "assets/images/anbaty_Simples/حرف (خ)2.png"
   },
   {
     "anbaty": "assets/images/keyboard/حرف خ.png",
     "arabic": "خ",
-    "anbatySimple": "assets/images/anbaty_Simples/حرف (خ)2.png"
+    "anbatySimple": "assets/images/anbaty_Simples/حرف (خ).png"
   },
   {
     "anbaty": "assets/images/keyboard/حرف د.png",
@@ -100,24 +100,24 @@ const List<Map> anbatyList = [
     "anbatySimple": "assets/images/anbaty_Simples/حرف (ش).png"
   },
   {
-    "anbaty": "assets/images/keyboard/حرف ص.png",
-    "arabic": "ص",
-    "anbatySimple": "assets/images/anbaty_Simples/حرف (ص).png"
+    "anbaty": "assets/images/keyboard/حرف ص 1.png",
+    "arabic": "صـ",
+    "anbatySimple": "assets/images/anbaty_Simples/حرف (ص)2.png"
   },
   {
     "anbaty": "assets/images/keyboard/حرف ص2.png",
     "arabic": "ص",
-    "anbatySimple": "assets/images/anbaty_Simples/حرف (ص)2.png"
+    "anbatySimple": "assets/images/anbaty_Simples/حرف (ص).png"
   },
   {
-    "anbaty": "assets/images/keyboard/حرف ض.png",
-    "arabic": "ض",
-    "anbatySimple": "assets/images/anbaty_Simples/حرف (ض).png"
+    "anbaty": "assets/images/keyboard/حرف ض 1.png",
+    "arabic": "ضـ",
+    "anbatySimple": "assets/images/anbaty_Simples/حرف (ض)2.png"
   },
   {
     "anbaty": "assets/images/keyboard/حرف ض2.png",
     "arabic": "ض",
-    "anbatySimple": "assets/images/anbaty_Simples/حرف (ض)2.png"
+    "anbatySimple": "assets/images/anbaty_Simples/حرف (ض).png"
   },
   {
     "anbaty": "assets/images/keyboard/حرف ط.png",
@@ -140,14 +140,14 @@ const List<Map> anbatyList = [
     "anbatySimple": "assets/images/anbaty_Simples/حرف (غ).png"
   },
   {
-    "anbaty": "assets/images/keyboard/حرف ف.png",
-    "arabic": "ف",
-    "anbatySimple": "assets/images/anbaty_Simples/حرف (ف).png"
+    "anbaty": "assets/images/keyboard/حرف ف 1.png",
+    "arabic": "فــ",
+    "anbatySimple": "assets/images/anbaty_Simples/حرف (ف)2.png"
   },
   {
     "anbaty": "assets/images/keyboard/حرف ف2.png",
     "arabic": "ف",
-    "anbatySimple": "assets/images/anbaty_Simples/حرف (ف)2.png"
+    "anbatySimple": "assets/images/anbaty_Simples/حرف (ف).png"
   },
   {
     "anbaty": "assets/images/keyboard/حرف ق.png",
@@ -155,54 +155,54 @@ const List<Map> anbatyList = [
     "anbatySimple": "assets/images/anbaty_Simples/حرف (ق).png"
   },
   {
-    "anbaty": "assets/images/keyboard/حرف ك2.png",
-    "arabic": "ك",
-    "anbatySimple": "assets/images/anbaty_Simples/حرف (ك).png"
+    "anbaty": "assets/images/keyboard/حرف ك 1.png",
+    "arabic": "كـ",
+    "anbatySimple": "assets/images/anbaty_Simples/حرف (ك)2.png"
   },
   {
     "anbaty": "assets/images/keyboard/حرف ك.png",
     "arabic": "ك",
-    "anbatySimple": "assets/images/anbaty_Simples/حرف (ك)2.png"
+    "anbatySimple": "assets/images/anbaty_Simples/حرف (ك).png"
   },
   {
-    "anbaty": "assets/images/keyboard/حرف ل2.png",
-    "arabic": "ل",
-    "anbatySimple": "assets/images/anbaty_Simples/حرف (ل).png"
+    "anbaty": "assets/images/keyboard/حرف ل 1.png",
+    "arabic": "لــ",
+    "anbatySimple": "assets/images/anbaty_Simples/حرف (ل)2.png"
   },
   {
     "anbaty": "assets/images/keyboard/حرف ل.png",
     "arabic": "ل",
-    "anbatySimple": "assets/images/anbaty_Simples/حرف (ل)2.png"
+    "anbatySimple": "assets/images/anbaty_Simples/حرف (ل).png"
   },
   {
-    "anbaty": "assets/images/keyboard/حرف م2.png",
-    "arabic": "م",
-    "anbatySimple": "assets/images/anbaty_Simples/حرف (م).png"
+    "anbaty": "assets/images/keyboard/حرف م 1.png",
+    "arabic": "مـ",
+    "anbatySimple": "assets/images/anbaty_Simples/حرف (م)2.png"
   },
   {
     "anbaty": "assets/images/keyboard/حرف م.png",
     "arabic": "م",
-    "anbatySimple": "assets/images/anbaty_Simples/حرف (م)2.png"
+    "anbatySimple": "assets/images/anbaty_Simples/حرف (م).png"
   },
   {
-    "anbaty": "assets/images/keyboard/حرف ن2.png",
-    "arabic": "ن",
-    "anbatySimple": "assets/images/anbaty_Simples/حرف (ن).png"
+    "anbaty": "assets/images/keyboard/حرف ن 1.png",
+    "arabic": "نــ",
+    "anbatySimple": "assets/images/anbaty_Simples/حرف (ن)2.png"
   },
   {
     "anbaty": "assets/images/keyboard/حرف ن.png",
     "arabic": "ن",
-    "anbatySimple": "assets/images/anbaty_Simples/حرف (ن)2.png"
+    "anbatySimple": "assets/images/anbaty_Simples/حرف (ن).png"
   },
   {
-    "anbaty": "assets/images/keyboard/حرف ه2.png",
-    "arabic": "ه",
-    "anbatySimple": "assets/images/anbaty_Simples/حرف (ه).png"
-  },
-  {
-    "anbaty": "assets/images/keyboard/حرف ه.png",
-    "arabic": "ه",
+    "anbaty": "assets/images/keyboard/حرف ه 1.png",
+    "arabic": "هـ",
     "anbatySimple": "assets/images/anbaty_Simples/حرف (ه)2.png"
+  },
+  {
+    "anbaty": "assets/images/keyboard/حرف ه 2.png",
+    "arabic": "ــه",
+    "anbatySimple": "assets/images/anbaty_Simples/حرف (ه).png"
   },
   {
     "anbaty": "assets/images/keyboard/حرف و2.png",
@@ -215,13 +215,13 @@ const List<Map> anbatyList = [
     "anbatySimple": "assets/images/anbaty_Simples/حرف (و)2.png"
   },
   {
-    "anbaty": "assets/images/keyboard/حرف ي.png",
-    "arabic": "ي",
-    "anbatySimple": "assets/images/anbaty_Simples/حرف (ي).png"
+    "anbaty": "assets/images/keyboard/حرف ي 1.png",
+    "arabic": "يـــ",
+    "anbatySimple": "assets/images/anbaty_Simples/حرف (ي)2.png"
   },
   {
     "anbaty": "assets/images/keyboard/حرف ي 2.png",
     "arabic": "ي",
-    "anbatySimple": "assets/images/anbaty_Simples/حرف (ي)2.png"
+    "anbatySimple": "assets/images/anbaty_Simples/حرف (ي).png"
   },
 ];
