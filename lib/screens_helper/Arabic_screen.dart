@@ -48,7 +48,7 @@ class ArabicScreen2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     model.forEach((element) {
-      ArabicTranns += element["arabic"];
+      ArabicTranns += element["arabicTranslate"];
     });
     return Container(
       decoration: BoxDecoration(

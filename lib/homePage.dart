@@ -26,9 +26,10 @@ class _HomePageState extends State<HomePage> {
 
   List<Map> SpaceList = [
     {
-      "anbaty": "assets/images/keyboard/مسافة.png",
+      "anbaty": "assets/images/keyboard/المسافة.png",
       "arabic": " ",
-      "anbatySimple": "assets/images/keyboard/مسافة.png"
+      "arabicTranslate": " ",
+      "anbatySimple": "assets/images/keyboard/المسافة.png"
     }
   ];
   onTaap(int i) {
