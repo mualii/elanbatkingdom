@@ -18,19 +18,19 @@ class ArabicScreen extends StatelessWidget {
         borderRadius: BorderRadius.circular(20),
         color: Color(0xffE1D9D0),
       ),
-      height: 450.h,
+      height: .180.sh,
       width: double.infinity,
       child: Directionality(
         textDirection: TextDirection.rtl,
         child: GridView.extent(
           physics: PageScrollPhysics(),
-          maxCrossAxisExtent: 130.h,
+          maxCrossAxisExtent: 40.sp,
           children: new List<Widget>.generate(listImageResult.length, (index) {
             return Center(
               child: Text(
                 listImageResult[index]["arabic"],
                 style: TextStyle(
-                  fontSize: 30,
+                  fontSize: 27.sp,
                 ),
               ),
             );
@@ -44,7 +44,7 @@ class ArabicScreen extends StatelessWidget {
 class ArabicScreen2 extends StatelessWidget {
   List model;
   ArabicScreen2({this.model});
-  String ArabicTranns = "";
+  String ArabicTranns = "  ";
   @override
   Widget build(BuildContext context) {
     model.forEach((element) {
@@ -52,29 +52,17 @@ class ArabicScreen2 extends StatelessWidget {
     });
     return Container(
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.only(
-            topLeft: Radius.circular(20), topRight: Radius.circular(20)),
+        borderRadius: BorderRadius.circular(20),
         color: Color(0xffE1D9D0),
       ),
-      height: 330.h,
+      height: .180.sh,
       width: double.infinity,
       child: Directionality(
         textDirection: TextDirection.rtl,
-        // child: GridView.extent(
-        //   physics: PageScrollPhysics(),
-        //   maxCrossAxisExtent: 130.h,
-        //   children: new List<Widget>.generate(listImageResult.length, (index) {
-        //     return Center(
-        //       child: Text(
-        //         listImageResult[index]["arabic"],
-        //         style: TextStyle(fontSize: 30),
-        //       ),
-        //     );
-        //   }),
-        // ),
         child: Text(
           ArabicTranns,
-          style: TextStyle(fontSize: 30),
+          textAlign: TextAlign.start,
+          style: TextStyle(fontSize: 27.sp),
         ),
       ),
     );

@@ -44,6 +44,8 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
+    // print(MediaQuery.of(context).size.height.toString() + "        Height");
+    // print(MediaQuery.of(context).size.width.toString() + "       width");
     return Scaffold(
         appBar: AppBar(
           title: Text(
@@ -62,37 +64,40 @@ class _HomePageState extends State<HomePage> {
               children: [
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 30),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text(
-                        "العربية",
-                        style: TextStyle(fontSize: 35, color: Colors.black),
-                      ),
-                      SizedBox(width: 100.w),
-                      InkWell(
-                        onTap: () {
-                          setState(() {
-                            isArabic = true;
-                          });
-                        },
-                        child: SizedBox(
-                          child: Image.asset('assets/images/Group 2.png'),
-                          width: 120.w,
-                          height: 120.h,
+                  child: Container(
+                    height: 70.h,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          "العربية",
+                          style: TextStyle(fontSize: 35, color: Colors.black),
                         ),
-                      ),
-                      SizedBox(width: 100.w),
-                      Text(
-                        "الانباطي",
-                        style: TextStyle(fontSize: 35, color: Colors.black),
-                      ),
-                    ],
+                        SizedBox(width: 10.w),
+                        InkWell(
+                          onTap: () {
+                            setState(() {
+                              isArabic = true;
+                            });
+                          },
+                          child: SizedBox(
+                            child: Image.asset('assets/images/Group 2.png'),
+                            width: 120.w,
+                            height: 120.h,
+                          ),
+                        ),
+                        SizedBox(width: 10.w),
+                        Text(
+                          "الانباطي",
+                          style: TextStyle(fontSize: 35, color: Colors.black),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
                 Padding(
                   padding:
-                      const EdgeInsets.symmetric(horizontal: 17, vertical: 10),
+                      const EdgeInsets.symmetric(horizontal: 17, vertical: 5),
                   child: Column(
                     children: [
                       EnbatyScreen(
@@ -123,10 +128,7 @@ class _HomePageState extends State<HomePage> {
                             IconButton(
                                 onPressed: () async {
                                   print("screen shot");
-                                  final image = await controller
-                                      .captureFromWidget(EnbatyScreen(
-                                    model: listImageResult,
-                                  ));
+                                  final image = await controller.capture();
                                   if (image == null) return;
                                   await saveImage(image);
                                   saveAndShare(image);
@@ -138,7 +140,7 @@ class _HomePageState extends State<HomePage> {
                     ],
                   ),
                 ),
-                SizedBox(height: 20.h),
+                SizedBox(height: 10.h),
                 Padding(
                   padding:
                       const EdgeInsets.symmetric(horizontal: 17, vertical: 10),
@@ -146,16 +148,16 @@ class _HomePageState extends State<HomePage> {
                     model: listImageResult,
                   ),
                 ),
-                SizedBox(height: 30.h),
+                SizedBox(height: 13.4.h),
                 Directionality(
                   textDirection: TextDirection.rtl,
                   child: Container(
-                    height: 650.h,
+                    height: .29.sh,
                     color: Color(0xffE1D9D0),
                     child: GridView.extent(
                       physics: PageScrollPhysics(),
                       // physics: NeverScrollableScrollPhysics(),
-                      maxCrossAxisExtent: 130.h,
+                      maxCrossAxisExtent: 50.h,
                       children:
                           new List<Widget>.generate(anbatyList.length, (index) {
                         return new GridTile(
@@ -171,7 +173,7 @@ class _HomePageState extends State<HomePage> {
                 Container(
                   color: Color(0xffE1D9D0),
                   width: double.infinity,
-                  height: 150.h,
+                  height: 35.h,
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -184,8 +186,8 @@ class _HomePageState extends State<HomePage> {
                           });
                         },
                         child: Container(
-                          height: 150.h,
-                          width: 200.w,
+                          height: 34.h,
+                          width: 70.w,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
                             color: Colors.white,
@@ -193,7 +195,7 @@ class _HomePageState extends State<HomePage> {
                           child: Center(
                             child: FaIcon(
                               FontAwesomeIcons.times,
-                              size: 40,
+                              size: 30,
                             ),
                           ),
                         ),
@@ -206,7 +208,7 @@ class _HomePageState extends State<HomePage> {
                           });
                         },
                         child: Container(
-                          height: 150.h,
+                          height: 70.h,
                           width: .59.sw,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
@@ -226,8 +228,8 @@ class _HomePageState extends State<HomePage> {
                           });
                         },
                         child: Container(
-                          height: 150.h,
-                          width: 200.w,
+                          height: 34.h,
+                          width: 70.w,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
                             color: Colors.white,
@@ -235,14 +237,14 @@ class _HomePageState extends State<HomePage> {
                           child: Center(
                             child: FaIcon(
                               FontAwesomeIcons.backspace,
-                              size: 40,
+                              size: 30,
                             ),
                           ),
                         ),
                       ),
                     ],
                   ),
-                )
+                ),
               ],
             );
           },
@@ -251,32 +253,35 @@ class _HomePageState extends State<HomePage> {
               children: [
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 30),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text(
-                        "الانباطي",
-                        style: TextStyle(fontSize: 35, color: Colors.black),
-                      ),
-                      SizedBox(width: 100.w),
-                      InkWell(
-                        onTap: () {
-                          setState(() {
-                            isArabic = false;
-                          });
-                        },
-                        child: SizedBox(
-                          child: Image.asset('assets/images/Group 2.png'),
-                          width: 120.w,
-                          height: 120.h,
+                  child: Container(
+                    height: 70.h,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          "الانباطي",
+                          style: TextStyle(fontSize: 35, color: Colors.black),
                         ),
-                      ),
-                      SizedBox(width: 100.w),
-                      Text(
-                        "العربية",
-                        style: TextStyle(fontSize: 35, color: Colors.black),
-                      ),
-                    ],
+                        SizedBox(width: 20.w),
+                        InkWell(
+                          onTap: () {
+                            setState(() {
+                              isArabic = false;
+                            });
+                          },
+                          child: SizedBox(
+                            child: Image.asset('assets/images/Group 2.png'),
+                            width: 120.w,
+                            height: 120.h,
+                          ),
+                        ),
+                        SizedBox(width: 20.w),
+                        Text(
+                          "العربية",
+                          style: TextStyle(fontSize: 35, color: Colors.black),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
                 Padding(
@@ -287,48 +292,13 @@ class _HomePageState extends State<HomePage> {
                       ArabicScreen2(
                         model: listImageResult,
                       ),
-                      Container(
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.only(
-                              bottomRight: Radius.circular(20),
-                              bottomLeft: Radius.circular(20)),
-                          color: Color(0xffE1D9D0),
-                        ),
-                        height: 120.h,
-                        width: double.infinity,
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.end,
-                          children: [
-                            IconButton(
-                              onPressed: () {
-                                setState(() {
-                                  listImageResult.clear();
-                                  print("close");
-                                  print(listImageResult.length);
-                                });
-                              },
-                              icon: FaIcon(FontAwesomeIcons.times),
-                            ),
-                            IconButton(
-                                onPressed: () {
-                                  setState(() {
-                                    listImageResult.removeLast();
-                                    print("delete");
-                                    print(listImageResult.length);
-                                  });
-                                },
-                                icon: FaIcon(FontAwesomeIcons.backspace)),
-                            Spacer(),
-                          ],
-                        ),
-                      ),
                     ],
                   ),
                 ),
-                SizedBox(height: 20.h),
+                SizedBox(height: 10.h),
                 Padding(
                   padding:
-                      const EdgeInsets.symmetric(horizontal: 17, vertical: 10),
+                      const EdgeInsets.symmetric(horizontal: 17, vertical: 5),
                   child: Column(
                     children: [
                       EnbatyScreen(
@@ -342,10 +312,10 @@ class _HomePageState extends State<HomePage> {
                               bottomLeft: Radius.circular(20)),
                           color: Color(0xffE1D9D0),
                         ),
-                        height: 120.h,
+                        height: 40,
                         width: double.infinity,
                         child: Row(
-                          mainAxisAlignment: MainAxisAlignment.end,
+                          // mainAxisAlignment: MainAxisAlignment.end,
                           children: [
                             Spacer(),
                             IconButton(
@@ -359,10 +329,7 @@ class _HomePageState extends State<HomePage> {
                             IconButton(
                                 onPressed: () async {
                                   print("screen shot");
-                                  final image = await controller
-                                      .captureFromWidget(EnbatyScreen(
-                                    model: listImageResult,
-                                  ));
+                                  final image = await controller.capture();
                                   if (image == null) return;
                                   await saveImage(image);
                                   saveAndShare(image);
@@ -374,107 +341,102 @@ class _HomePageState extends State<HomePage> {
                     ],
                   ),
                 ),
-                SizedBox(height: 30.h),
-                Column(
-                  children: [
-                    Directionality(
-                      textDirection: TextDirection.rtl,
-                      child: Container(
-                        height: 650.h,
-                        color: Color(0xffE1D9D0),
-                        child: GridView.extent(
-                          physics: PageScrollPhysics(),
-                          // physics: NeverScrollableScrollPhysics(),
-                          maxCrossAxisExtent: 130.h,
-                          children: new List<Widget>.generate(anbatyList.length,
-                              (index) {
-                            return new GridTile(
-                              child: InkWell(
-                                onTap: () => onTaap(index),
-                                child: KeyBoardBottum(index),
-                              ),
-                            );
-                          }),
+                SizedBox(height: 13.4.h),
+                Directionality(
+                  textDirection: TextDirection.rtl,
+                  child: Container(
+                    height: .29.sh,
+                    color: Color(0xffE1D9D0),
+                    child: GridView.extent(
+                      physics: PageScrollPhysics(),
+                      // physics: NeverScrollableScrollPhysics(),
+                      maxCrossAxisExtent: 50.h,
+                      children:
+                          new List<Widget>.generate(anbatyList.length, (index) {
+                        return new GridTile(
+                          child: InkWell(
+                            onTap: () => onTaap(index),
+                            child: KeyBoardBottum(index),
+                          ),
+                        );
+                      }),
+                    ),
+                  ),
+                ),
+                Container(
+                  color: Color(0xffE1D9D0),
+                  width: double.infinity,
+                  height: 35.h,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      InkWell(
+                        onTap: () {
+                          setState(() {
+                            listImageResult.clear();
+                            print("close");
+                            print(listImageResult.length);
+                          });
+                        },
+                        child: Container(
+                          height: 34.h,
+                          width: 70.w,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10),
+                            color: Colors.white,
+                          ),
+                          child: Center(
+                            child: FaIcon(
+                              FontAwesomeIcons.times,
+                              size: 30,
+                            ),
+                          ),
                         ),
                       ),
-                    ),
-                    Container(
-                      color: Color(0xffE1D9D0),
-                      width: double.infinity,
-                      height: 150.h,
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          InkWell(
-                            onTap: () {
-                              setState(() {
-                                listImageResult.clear();
-                                print("close");
-                                print(listImageResult.length);
-                              });
-                            },
-                            child: Container(
-                              height: 150.h,
-                              width: 200.w,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(10),
-                                color: Colors.white,
-                              ),
-                              child: Center(
-                                child: FaIcon(
-                                  FontAwesomeIcons.times,
-                                  size: 40,
-                                ),
-                              ),
-                            ),
+                      InkWell(
+                        onTap: () {
+                          setState(() {
+                            listImageResult.add(SpaceList[0]);
+                            print(listImageResult.toString());
+                          });
+                        },
+                        child: Container(
+                          height: 70.h,
+                          width: .59.sw,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10),
+                            color: Colors.white,
                           ),
-                          InkWell(
-                            onTap: () {
-                              setState(() {
-                                listImageResult.add(SpaceList[0]);
-                                print(listImageResult.toString());
-                              });
-                            },
-                            child: Container(
-                              height: 150.h,
-                              width: .59.sw,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(10),
-                                color: Colors.white,
-                              ),
-                              child: Center(
-                                  child: Image(
-                                      image: AssetImage(
-                                          'assets/images/Path.png'))),
-                            ),
-                          ),
-                          InkWell(
-                            onTap: () {
-                              setState(() {
-                                listImageResult.removeLast();
-                                print("delete");
-                                print(listImageResult.length);
-                              });
-                            },
-                            child: Container(
-                              height: 150.h,
-                              width: 200.w,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(10),
-                                color: Colors.white,
-                              ),
-                              child: Center(
-                                child: FaIcon(
-                                  FontAwesomeIcons.backspace,
-                                  size: 40,
-                                ),
-                              ),
-                            ),
-                          ),
-                        ],
+                          child: Center(
+                              child: Image(
+                                  image: AssetImage('assets/images/Path.png'))),
+                        ),
                       ),
-                    )
-                  ],
+                      InkWell(
+                        onTap: () {
+                          setState(() {
+                            listImageResult.removeLast();
+                            print("delete");
+                            print(listImageResult.length);
+                          });
+                        },
+                        child: Container(
+                          height: 34.h,
+                          width: 70.w,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10),
+                            color: Colors.white,
+                          ),
+                          child: Center(
+                            child: FaIcon(
+                              FontAwesomeIcons.backspace,
+                              size: 30,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ],
             );

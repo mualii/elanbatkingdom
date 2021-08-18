@@ -25,21 +25,21 @@ class _EnbatyScreenState extends State<EnbatyScreen> {
                   topLeft: Radius.circular(20), topRight: Radius.circular(20)),
               color: Color(0xffE1D9D0),
             ),
-            height: 330.h,
+            height: .160.sh,
             width: double.infinity,
             child: Directionality(
               textDirection: TextDirection.rtl,
               child: GridView.extent(
                 physics: PageScrollPhysics(),
                 // physics: NeverScrollableScrollPhysics(),
-                maxCrossAxisExtent: 130.h,
+                maxCrossAxisExtent: 40.sp,
                 children:
                     new List<Widget>.generate(widget.model.length, (index) {
                   return new GridTile(
                     child: Container(
                         // color: Color(0xffE1D9D0),
-                        width: 20,
-                        height: 20,
+                        width: 10,
+                        height: 10,
                         child: Center(
                           child: Image.asset(
                             widget.model[index]["anbatySimple"],
