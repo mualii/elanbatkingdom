@@ -22,7 +22,8 @@ class _EnbatyScreenState extends State<EnbatyScreen> {
           child: Container(
             decoration: BoxDecoration(
               borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(20), topRight: Radius.circular(20)),
+                  topLeft: Radius.circular(20.sp),
+                  topRight: Radius.circular(20.sp)),
               color: Color(0xffE1D9D0),
             ),
             height: .160.sh,
@@ -38,8 +39,8 @@ class _EnbatyScreenState extends State<EnbatyScreen> {
                   return new GridTile(
                     child: Container(
                         // color: Color(0xffE1D9D0),
-                        width: 10,
-                        height: 10,
+                        width: 10.w,
+                        height: 10.h,
                         child: Center(
                           child: Image.asset(
                             widget.model[index]["anbatySimple"],
@@ -56,12 +57,3 @@ class _EnbatyScreenState extends State<EnbatyScreen> {
     );
   }
 }
-
-// Container(
-//   height: 30,
-//   child: Row(
-//     children: [
-//       IconButton(onPressed: () {}, icon: FaIcon(Icons.copy))
-//     ],
-//   ),
-// )
