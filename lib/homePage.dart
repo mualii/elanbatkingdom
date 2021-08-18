@@ -157,7 +157,7 @@ class _HomePageState extends State<HomePage> {
                     child: GridView.extent(
                       physics: PageScrollPhysics(),
                       // physics: NeverScrollableScrollPhysics(),
-                      maxCrossAxisExtent: 50.h,
+                      maxCrossAxisExtent: 50.sp,
                       children:
                           new List<Widget>.generate(anbatyList.length, (index) {
                         return new GridTile(
@@ -350,7 +350,7 @@ class _HomePageState extends State<HomePage> {
                     child: GridView.extent(
                       physics: PageScrollPhysics(),
                       // physics: NeverScrollableScrollPhysics(),
-                      maxCrossAxisExtent: 50.h,
+                      maxCrossAxisExtent: 50.sp,
                       children:
                           new List<Widget>.generate(anbatyList.length, (index) {
                         return new GridTile(
