@@ -161,7 +161,7 @@ class _HomePageState extends State<HomePage> {
                   Directionality(
                     textDirection: TextDirection.rtl,
                     child: Container(
-                      height: .29.sh,
+                      height: .28.sh,
                       color: Color(0xffE1D9D0),
                       child: GridView.extent(
                         shrinkWrap: true,
@@ -364,7 +364,7 @@ class _HomePageState extends State<HomePage> {
                   Directionality(
                     textDirection: TextDirection.rtl,
                     child: Container(
-                      height: .29.sh,
+                      height: .28.sh,
                       color: Color(0xffE1D9D0),
                       child: GridView.extent(
                         shrinkWrap: true,
