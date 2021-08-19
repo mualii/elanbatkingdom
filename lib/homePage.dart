@@ -149,7 +149,7 @@ class _HomePageState extends State<HomePage> {
                       ],
                     ),
                   ),
-                  SizedBox(height: 10.h),
+                  SizedBox(height: 20.h),
                   Padding(
                     padding:
                         EdgeInsets.symmetric(horizontal: 17.w, vertical: 10.h),
@@ -360,7 +360,7 @@ class _HomePageState extends State<HomePage> {
                       ],
                     ),
                   ),
-                  SizedBox(height: 13.4.h),
+                  SizedBox(height: 23.4.h),
                   Directionality(
                     textDirection: TextDirection.rtl,
                     child: Container(
