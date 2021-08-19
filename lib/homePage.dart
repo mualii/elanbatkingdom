@@ -256,6 +256,11 @@ class _HomePageState extends State<HomePage> {
                       ],
                     ),
                   ),
+                  Container(
+                    color: Colors.black,
+                    width: double.infinity,
+                    height: .02.sh,
+                  )
                 ],
               );
             },
@@ -459,6 +464,11 @@ class _HomePageState extends State<HomePage> {
                       ],
                     ),
                   ),
+                  Container(
+                    color: Colors.black,
+                    width: double.infinity,
+                    height: .02.sh,
+                  )
                 ],
               );
             },
