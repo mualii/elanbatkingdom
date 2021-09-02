@@ -16,7 +16,8 @@ class MyApp extends StatelessWidget {
         820.5714285714286,
       ),
       builder: () => MaterialApp(
-        title: 'Flutter Demo',
+        debugShowCheckedModeBanner: false,
+        title: 'الانباط',
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),

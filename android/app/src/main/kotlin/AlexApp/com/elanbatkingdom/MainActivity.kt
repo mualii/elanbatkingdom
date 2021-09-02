@@ -1,4 +1,4 @@
-package AlexApp.com.elanbatkingdom
+package com.alexapps.elanbatkingdom
 
 import io.flutter.embedding.android.FlutterActivity
 
