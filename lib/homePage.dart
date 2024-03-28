@@ -1,7 +1,6 @@
 import 'dart:io';
 import 'dart:typed_data';
-
-import 'package:conditional_builder/conditional_builder.dart';
+import 'package:conditional_builder_null_safety/conditional_builder_null_safety.dart';
 import 'package:elanbatkingdom/conest.dart';
 import 'package:elanbatkingdom/screens_helper/Arabic_screen.dart';
 import 'package:elanbatkingdom/screens_helper/Enbaty_screen.dart';
@@ -140,7 +139,7 @@ class _HomePageState extends State<HomePage> {
                                     saveAndShare(image);
                                   },
                                   icon: FaIcon(
-                                    FontAwesomeIcons.shareAltSquare,
+                                    FontAwesomeIcons.squareShareNodes,
                                     size: 30.sp,
                                   )),
                             ],
@@ -204,7 +203,7 @@ class _HomePageState extends State<HomePage> {
                             ),
                             child: Center(
                               child: FaIcon(
-                                FontAwesomeIcons.times,
+                                FontAwesomeIcons.xmark,
                                 size: 30.sp,
                               ),
                             ),
@@ -247,7 +246,7 @@ class _HomePageState extends State<HomePage> {
                             ),
                             child: Center(
                               child: FaIcon(
-                                FontAwesomeIcons.backspace,
+                                FontAwesomeIcons.deleteLeft,
                                 size: 30.sp,
                               ),
                             ),
@@ -356,7 +355,7 @@ class _HomePageState extends State<HomePage> {
                                     saveAndShare(image);
                                   },
                                   icon: FaIcon(
-                                    FontAwesomeIcons.shareAltSquare,
+                                    FontAwesomeIcons.squareShareNodes,
                                     size: 30.sp,
                                   )),
                             ],
@@ -412,7 +411,7 @@ class _HomePageState extends State<HomePage> {
                             ),
                             child: Center(
                               child: FaIcon(
-                                FontAwesomeIcons.times,
+                                FontAwesomeIcons.xmark,
                                 size: 30.sp,
                               ),
                             ),
@@ -455,7 +454,7 @@ class _HomePageState extends State<HomePage> {
                             ),
                             child: Center(
                               child: FaIcon(
-                                FontAwesomeIcons.backspace,
+                                FontAwesomeIcons.deleteLeft,
                                 size: 30.sp,
                               ),
                             ),

@@ -5,7 +5,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 class ArabicScreen extends StatelessWidget {
   List model;
   String ArabicList = "";
-  ArabicScreen({this.model});
+  ArabicScreen({required this.model});
 
   @override
   Widget build(BuildContext context) {
@@ -43,7 +43,7 @@ class ArabicScreen extends StatelessWidget {
 
 class ArabicScreen2 extends StatelessWidget {
   List model;
-  ArabicScreen2({this.model});
+  ArabicScreen2({required this.model});
   String ArabicTranns = "  ";
   @override
   Widget build(BuildContext context) {

@@ -6,7 +6,7 @@ class EnbatyScreen extends StatefulWidget {
   List model;
   ScreenshotController controller = ScreenshotController();
 
-  EnbatyScreen({this.model, this.controller});
+  EnbatyScreen({required this.model, required this.controller});
 
   @override
   _EnbatyScreenState createState() => _EnbatyScreenState();

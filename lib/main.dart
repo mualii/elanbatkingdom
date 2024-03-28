@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
         411.42857142857144,
         820.5714285714286,
       ),
-      builder: () => MaterialApp(
+      builder: (context, child) => MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'الانباط',
         theme: ThemeData(
